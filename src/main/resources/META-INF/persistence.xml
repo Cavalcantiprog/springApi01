@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+          http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+
+	<!-- define a conexão com um banco de dados -->
+	<persistence-unit name="conexao_mysql">
+		<properties>
+
+			<!-- URL do banco de dados -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/springApiDomingo01?serverTimezone=UTC" />
+
+			<!-- usuário do banco de dados -->
+			<property name="javax.persistence.jdbc.user" value="root" />
+
+			<!-- senha do usuário -->
+			<property name="javax.persistence.jdbc.password"
+				value="580655" />
+
+			<!-- Endereço do DRIVER do MySql -->
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+
+			<!-- Define o dialeto do banco de dados (transcrição de SQL) -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQLDialect" />
+
+			<!-- Exibir as queries SQL que são executadas no banco de dados -->
+			<property name="hibernate.show_sql" value="true" />
+
+			<!-- Exibir as queries SQL de maneira formatada no console -->
+			<property name="hibernate.format_sql" value="true" />
+
+		</properties>
+	</persistence-unit>
+
+</persistence>
